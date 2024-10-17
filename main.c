@@ -1,18 +1,20 @@
 #include "libft.h"
 
 int main() {
-    char str[] = "ham22da2";
-    int i = 0;
+    int ch1 = 127;  // ASCII for 'A'
+    int ch2 = 0; // Not in ASCII range
 
-    while (str[i] != '\0') {
-        if (ft_isalpha(str[i])) {
-            write(1, &str[i], 1);
-        }
-        else if (ft_isdigit(str[i]))
-        {
-            write(1,"g", 1);
-        }
-        i++;
+    if (ft_isascii(ch1)) {
+        printf("%d is an ASCII character.\n", ch1);
+    } else {
+        printf("%d is not an ASCII character.\n", ch1);
     }
+
+    if (ft_isascii(ch2)) {
+        printf("%d is an ASCII character.\n", ch2);
+    } else {
+        printf("%d is not an ASCII character.\n", ch2);
+    }
+
     return 0;
 }
