@@ -1,20 +1,15 @@
+#include <stdio.h>
 #include "libft.h"
+#include <ctype.h>
 
-int main() {
-    int ch1 = 127;  // ASCII for 'A'
-    int ch2 = 0; // Not in ASCII range
-
-    if (ft_isascii(ch1)) {
-        printf("%d is an ASCII character.\n", ch1);
-    } else {
-        printf("%d is not an ASCII character.\n", ch1);
+int main(void)
+{
+    for (int i = 0; i < 128; i++)
+    {
+        if (ft_isprint(i))
+            printf("'%c' (ASCII: %d) is printable.\n", i, i);
+        else
+            printf("ASCII: %d is not printable.\n", i);
     }
-
-    if (ft_isascii(ch2)) {
-        printf("%d is an ASCII character.\n", ch2);
-    } else {
-        printf("%d is not an ASCII character.\n", ch2);
-    }
-
     return 0;
 }
