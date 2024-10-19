@@ -13,5 +13,7 @@ int ft_strlen(char  *str);
 int ft_atoi(const char *str);
 int ft_toupper(int  c);
 int ft_tolower(int  c);
+int strncmp(const char *str1, const char *str2, size_t n);
+
 
 #endif
