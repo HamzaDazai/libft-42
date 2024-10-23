@@ -1,30 +1,32 @@
-#include <stdio.h>
-#include <string.h>
-#include <stddef.h>
+#include "libft.h"
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-  size_t i;
+    size_t  dst_len;
+    size_t  src_len;
+    size_t  i;
+    size_t  j;
 
-  i = 0;
-  while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i] && i < (n - 1))
-  {
-    i++;
-  }
-  return (s1[i] - s2[i]);
-}
+    dst_len = ft_strlen(dst);
+    src_len = ft_strlen(src);
+    i = dst_len;
+    j = 0;
 
-int main()
-{
-  char str1[] = "abcda", str2[] = "abcdb";
-  int result;
-  int n = 4;
-  // comparing strings str1 and str2
-  result = ft_strncmp(str1, str2, n);
-  printf("ft_strcmp(str1, str2, and (n) ) = %d\n", result);
+    // If dstsize is less than or equal to the length of dst, return dstsize + src_len
+    if (dstsize <= dst_len)
+        return (dstsize + src_len);
 
-  result = strncmp(str1, str2, n);
-  printf("strncmp(str1, str2) = %d\n", result);
+    // Concatenate src to dst while avoiding overflow
+    while (src[j] != '\0' && i < (dstsize - 1))
+    {
+        dst[i] = src[j];
+        i++;
+        j++;
+    }
 
-  return 0;
+    // Ensure null-termination
+    dst[i] = '\0';
+
+    // Return the total length of the string it tried to create
+    return (dst_len + src_len);
 }

@@ -1,14 +1,13 @@
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int main()
 {
-  char dest[12] = "Hello hamza";
+  char dest[120] = "Hello hamza";
   const char *src = "Dazia!";
-  size_t dest_size = 6;
+  size_t dest_size = 55;
 
   // Concatenate src to dest with size limit
-  size_t result = strlcat(dest, src, dest_size);
+  size_t result = ft_strlcat(dest, src, dest_size);
 
   // Print the result
   printf("Concatenated string: %s\n", dest);
