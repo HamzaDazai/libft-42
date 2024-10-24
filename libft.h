@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:50:29 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/24 15:48:15 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/24 16:01:28 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define LIBFT_H
 #include <unistd.h>
 #include <stdio.h>
-#include <stddef.h>
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);
