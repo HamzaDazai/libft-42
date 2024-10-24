@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:10:37 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/24 16:25:36 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/24 16:39:58 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char * ft_strrchr(const char *s, int c)
         size_s--;
     }
     if (c == '\0')
-        re
-    
+        return ((char *)&s[(ft_strlen(s))]);
+    return NULL;
 }
