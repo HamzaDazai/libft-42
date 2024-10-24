@@ -1,14 +1,15 @@
 #include "libft.h"
+int main() 
+{
+   char str[] = "This is simple string";
+   char* sh;
 
-int main() {
-    char *source = "hamza dazia";
-    char *substring = "a1546949494";
-    char *result = ft_strnstr(source, substring, 5);
+   printf("Searching for the character in 's' in the given string i.e. \"%s\"\n", str);
+   sh = ft_strchr(str, '\0');
 
-    if (result) {
-        printf("Found: %s\n", result);
-    } else {
-        printf("Not found.\n");
-    }
-    return 0;
+   if (sh != NULL) 
+   {
+       printf("Found at position- %ld\n", sh - str );
+   }
+   return 0;
 }
