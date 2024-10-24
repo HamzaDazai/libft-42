@@ -23,9 +23,7 @@ char * ft_strrchr(const char *s, int c)
             return ((char *)&s[size_s]);
         size_s--;
     }
-    if ((unsigned char)s[0] == ((unsigned char )c))
+    if ((unsigned char)s[0] == ((unsigned char)c))
         return ((char *)&s[0]);
-    if (c == '\0')
-        return ((char *)&s[(ft_strlen(s))]);
-    return NULL;
+    return (c == '\0') ? ((char *)&s[ft_strlen(s)]) : NULL;
 }

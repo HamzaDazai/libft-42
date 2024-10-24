@@ -1,15 +1,17 @@
+#include <stdio.h>
+#include <string.h>
 #include "libft.h"
-int main() 
-{
-   char str[] = "This is simple string";
-   char* sh;
 
-   printf("Searching for the character in 's' in the given string i.e. \"%s\"\n", str);
-   sh = ft_strchr(str, '\0');
+int main () {
+   const char str[] = "https://www.tutorialspoint.com";
+   const char ch = 't';
+   char *ret;
 
-   if (sh != NULL) 
-   {
-       printf("Found at position- %ld\n", sh - str );
-   }
-   return 0;
+   ret = ft_strrchr(str, ch);
+
+   printf("String after |%c| is - |%s|\n", ch, ret);
+   ret  = strrchr(str, ch);
+   printf("String after |%c| is - |%s|\n", ch, ret);
+
+   return(0);
 }
