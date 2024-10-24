@@ -32,4 +32,6 @@ size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize
 char * ft_strnstr(const char *haystack, const char *needle, size_t len);
 char * ft_stchr(const char *s, int c);
 char * ft_strrchr(const char *s, int c);
+void bzero(void *s, size_t n);
+
 #endif
