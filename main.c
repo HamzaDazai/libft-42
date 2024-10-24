@@ -3,8 +3,8 @@
 #include "libft.h"
 
 int main () {
-   const char str[] = "https://www.tutorialspoint.com";
-   const char ch = 't';
+   const char str[] = "TestStringMoreChars";
+   const char ch = 'M';
    char *ret;
 
    ret = ft_strrchr(str, ch);

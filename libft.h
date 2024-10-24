@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:50:29 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/24 16:11:23 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/24 22:48:23 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,5 @@ size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize
 char * ft_strnstr(const char *haystack, const char *needle, size_t len);
 char * ft_strchr(const char *s, int c);
 char * ft_strrchr(const char *s, int c);
-void bzero(void *s, size_t n);
 
 #endif
