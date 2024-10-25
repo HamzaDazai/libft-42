@@ -4,7 +4,7 @@
 
 int main () {
    const char str[] = "TestStringMoreChars";
-   const char ch = 'M';
+   const char ch = 'T';
    char *ret;
 
    ret = ft_strrchr(str, ch);

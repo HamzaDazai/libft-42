@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:35:07 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/23 18:35:08 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/25 17:16:58 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	src_len = ft_strlen(src);
 	i = dst_len;
 	j = 0;
-	if (!dst || !src)
+	if (!src)
 		return (0);
 	if (dstsize <= dst_len)
 		return (dstsize + src_len);
