@@ -2,10 +2,10 @@
 #include <string.h>
 
 int main() {
-    char dst[20] = "dst";
+    char dst[20] = "";
     const char *src = "";
-    size_t size = 50;
-    size_t rs = strlcat(dst, src, size);
+    size_t size = 20;
+    size_t rs = strlcpy(dst, src, size);
 
     printf("Concatenated string: %s\n", dst);
     printf("Concatenated string: %ld\n", rs);
