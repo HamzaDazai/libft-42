@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:50:29 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/26 17:10:28 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/26 21:00:52 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ char * ft_strchr(const char *s, int c);
 char * ft_strrchr(const char *s, int c);
 void * ft_memcpy(void * dst, const void * src, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
+void * ft_memchr(const void *s, int c, size_t n);
 
 #endif
