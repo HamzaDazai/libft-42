@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:35:13 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/23 18:35:14 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/26 14:36:20 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	if (dstsize == 0)
 		return (src_len);
 	if (dstsize > 0)
-	{
+	{ 
 		while (src[i] != '\0' && i < (dstsize - 1))
 		{
 			dst[i] = src[i];
