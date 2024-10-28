@@ -3,7 +3,7 @@
 #include "libft.h"
 
 int main () {
-   char dest_str[] = "oldstring";
+   char dest_str[] = "";
    const char src_str[]  = "newstring";
    printf("Before memmove dest = %s, src = %s\n", dest_str, src_str);
    ft_memmove(dest_str, src_str, 9);

@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 06:39:49 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/28 19:31:11 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/28 20:23:09 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void * ft_memmove(void *dst, const void *src, size_t len)
 {
+    if (dst == NULL || src == NULL)
+        return NULL;
     char    *ds;
     const char  *sr;
     size_t  i;
