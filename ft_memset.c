@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 22:55:42 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/28 01:20:07 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/28 02:31:36 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void * ft_memset(void *b, int c, size_t len)
 
     while(i < len)
     {
-        p_b[i] = c;
+        p_b[i] = (unsigned char )c;
         i++;
     }
     return (b);
