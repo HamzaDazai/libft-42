@@ -1,11 +1,12 @@
 #include "libft.h"
 #include <string.h>
+#include <stdio.h>
 
 int main() {
     char dst[20] = "";
-    const char *src = "";
-    size_t size = 20;
-    size_t rs = strlcpy(dst, src, size);
+    const char *src = "hamza"; 
+    size_t size = -11;
+    size_t rs = ft_strlcpy(dst, src, size);
 
     printf("Concatenated string: %s\n", dst);
     printf("Concatenated string: %ld\n", rs);
