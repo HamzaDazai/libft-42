@@ -1,12 +1,19 @@
 #include <stdio.h>
-#include <string.h>
-#include "libft.h"
-
-int main () {
-   char dest_str[] = "";
-   const char src_str[]  = "newstring";
-   printf("Before memmove dest = %s, src = %s\n", dest_str, src_str);
-   ft_memmove(dest_str, src_str, 9);
-   printf("After memmove dest = %s, src = %s\n", dest_str, src_str);
-   return(0);
+#include <stdlib.h>
+ 
+int main(void)
+{
+    int* p1 = calloc(4, sizeof(int));    // allocate and zero out an array of 4 int
+    int* p2 = calloc(1, sizeof(int)); // same, naming the array type directly
+    int* p3 = calloc(4, sizeof *p3);     // same, without repeating the type name
+ 
+    if (p2)
+    {
+        for (int n = 0; n < 4; ++n) // print the array
+            printf("p1[%d] == %d\n", n, p1[n]);
+    }
+ 
+    free(p1);
+    free(p2);
+    free(p3);
 }

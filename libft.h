@@ -6,13 +6,14 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:50:29 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/28 20:23:58 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/29 08:50:22 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 #define LIBFT_H
 #include <unistd.h>
+#include <stdlib.h>
  
 
 
