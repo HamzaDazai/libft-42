@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:36:38 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/30 11:24:42 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/30 17:40:42 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char * ft_strdup(const char *s1)
 
     if (s1 == NULL)
         return NULL;
-    len = ft_strlen(s1);
+    len = ft_strlen(s1); 
     dst = (char *)ft_calloc((len + 1),sizeof(char));
     if (dst == NULL)
         return NULL;
