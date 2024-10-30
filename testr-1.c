@@ -1,46 +1,7 @@
-#include <unistd.h>
-#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
-size_t ft_strlen(const char *str) {
-    size_t len = 0;
-    while (str[len] != '\0') {
-        len++;
-    }
-    return len;
-}
-
-char *ft_strnstr(const char *haystack, const char *needle, size_t len) {
-    size_t needle_len;
-    const char *p_haystack;
-    const char *p_needle;
-
-    needle_len = ft_strlen(needle);
-    if (needle_len == 0) {
-        return (char *)haystack; // Return haystack if needle is empty
-    }
-
-    while (*haystack != '\0' && len >= needle_len) {
-        p_haystack = haystack;
-        p_needle = needle;
-
-        while (*p_haystack == *p_needle && *p_needle != '\0' && len > 0) {
-            p_haystack++;
-            p_needle++;
-            len--; // Decrease len as we check each character
-        }
-
-        if (*p_needle == '\0') {
-            return (char *)haystack; // Found needle, return current haystack
-        }
-
-        haystack++;
-        len--; // Decrease len for the next iteration
-    }
-
-    return NULL; // Needle not found
-}
+char *ft_strnstr(const char *haystack, const char *needle, size_t len); // Your implementation
 
 int main() {
     const char *haystack1 = "Hello, world!";

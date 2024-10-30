@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:50:29 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/30 10:53:47 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/30 12:10:31 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,8 @@ void * ft_memset(void *b, int c, size_t len);
 void * ft_memmove(void *dst, const void *src, size_t len);
 void * ft_calloc(size_t count, size_t size);
 char * ft_strdup(const char *s1);
+//Part 2 - Additional functions.
+char *ft_substr(char const *s, unsigned int start, size_t len);
+
 
 #endif
