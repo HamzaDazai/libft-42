@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:50:29 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/29 08:50:22 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/30 10:53:47 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #define LIBFT_H
 #include <unistd.h>
 #include <stdlib.h>
- 
+#include <stdio.h>
+#include <string.h>
 
 
 int ft_isalpha(int c);
@@ -40,5 +41,6 @@ void ft_bzero(void *s, size_t n);
 void * ft_memset(void *b, int c, size_t len);
 void * ft_memmove(void *dst, const void *src, size_t len);
 void * ft_calloc(size_t count, size_t size);
+char * ft_strdup(const char *s1);
 
 #endif
