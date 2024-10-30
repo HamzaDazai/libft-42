@@ -27,7 +27,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 
 int main ()
 {
-    char    s[]="HamzaDazia";
+    char    s[]= NULL;
     char    *cd = ft_substr(s, 2, 10040);
     printf("%s\n", cd);
     printf("%zu",ft_strlen(s));

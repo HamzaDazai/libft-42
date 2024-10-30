@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 17:37:31 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/30 18:21:38 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/30 18:30:11 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     size_t  i;
     size_t  s_len;
     
+    if (s == NULL)
+        return NULL;
     if (start >= len)
         return ft_strdup("");
     s_len = ft_strlen(s);
