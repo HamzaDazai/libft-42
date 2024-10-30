@@ -1,26 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 19:32:23 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/30 19:03:27 by hdazia           ###   ########.fr       */
+/*   Created: 2024/10/30 19:45:49 by hdazia            #+#    #+#             */
+/*   Updated: 2024/10/30 19:46:44 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_calloc(size_t nmemb, size_t size)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-	if (nmemb < 0 || size < 0)
-		return NULL;
-	void	*arry;
-	
-	arry = (void *) malloc(nmemb * size);
-	if (arry == NULL)
-		return NULL;
-	ft_bzero(arry,(nmemb * size));
-	return (arry);
+        
 }

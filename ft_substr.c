@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 17:37:31 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/30 18:30:11 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/30 19:44:27 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,11 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     }
     ds[i] = '\0';
     return (ds);
+}
+int main ()
+{
+    char    *cd = ft_substr(NULL, 0, 0);
+    printf("%s\n", cd);
+    free(cd); 
+    return 0;
 }
