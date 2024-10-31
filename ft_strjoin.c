@@ -14,7 +14,7 @@
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
-    if (*s1 == NULL || *s2 == NULL )
+    if (s1 == NULL || s2 == NULL )
         return NULL;
     char    *all_str;
     size_t  s1_len;
@@ -44,8 +44,12 @@ char *ft_strjoin(char const *s1, char const *s2)
     return (all_str);
     
 }
-
+/*
 int main(void)
 {
-    
+    //char *all[] = {"hamza", " sazi"};
+    char *ch= ft_strjoin(NULL, NULL);
+    printf("%s \n",ch);
+    return 0;
 }
+*/
