@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:34:39 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/23 18:34:40 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/31 07:02:08 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,9 @@ int	ft_atoi(const char *str)
 		rs = rs * 10 + (str[i] - '0');
 		i++;
 	}
+	if (sign == 1 && rs < 0)
+		return (-1);
+	if (sign == -1 && rs > 0)
+		return (0);
 	return (rs * sign);
 }
