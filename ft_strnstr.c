@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:53:12 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/30 15:12:37 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/31 10:22:28 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ char * ft_strnstr(const char *haystack, const char *needle, size_t len)
     }
     return NULL;
 }
-/*
+
 int main() {
-    const char *haystack1 = "Hello, world!";
-    const char *needle1 = "world";
+    const char *haystack1 = "azz hamza dazia azz";
+    const char *needle1 = "azz";
     
     const char *haystack2 = "Hello, world!";
     const char *needle2 = "lo";
@@ -103,4 +103,3 @@ int main() {
 
     return 0;
 }
-*/

@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:50:29 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/30 19:45:05 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/10/31 11:45:55 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ char * ft_strdup(const char *s1);
 //Part 2 - Additional functions.
 char *ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_strjoin(char const *s1, char const *s2);
-
+char *ft_strtrim(char const *s1, char const *set);
+char **ft_split(char const *s, char c);
 
 #endif
