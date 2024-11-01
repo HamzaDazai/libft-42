@@ -10,3 +10,5 @@ https://www.youtube.com/watch?v=i1pbAozGl0U&list=PLZpzLuUp9qXyWylaS9C8Z4uIKWZxQc
 check strnstr NULL ;
 tab binery in memset ;
 layout memory;
+file descriptor;
+data starctur   ;

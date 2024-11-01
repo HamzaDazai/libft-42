@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 05:32:26 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/01 05:38:47 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/01 05:59:25 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putnbr_fd(int n, int fd)
 {
     if (fd < 0)
-        return 0;
+        return;
 	long	nb;
 
 	nb = n;
@@ -34,7 +34,7 @@ void	ft_putnbr_fd(int n, int fd)
 }
 int main()
 {
-    long i = 21474836470;
+    int i = -2147483648;
     ft_putnbr_fd(i,1);
     return 0;
 }
