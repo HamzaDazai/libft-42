@@ -6,39 +6,33 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 06:39:49 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/28 20:23:09 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/03 08:55:36 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void * ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    if (dst == NULL || src == NULL || len == 0)
-        return (dst);
-    char    *ds;
-    const char  *sr;
-    size_t  i;
+	char		*ds;
+	const char	*sr;
+	size_t		i;
 
-    ds = (char *)dst;
-    sr = (const char *) src;
-    i = 0;    
-    if (ds < sr)
-    {
-        while (i < len)
-        {
-            ds[i] = sr[i];
-            i++;
-        }
-    }
-    else
-    {
-        i = len;
-        while (i > 0)
-        {
-            i--;
-            ds[i] = sr[i];
-        }
-    }
-    return (dst);
+	if (dst == NULL || src == NULL || len == 0)
+		return (dst);
+	ds = (char *)dst;
+	sr = (const char *) src;
+	i = 0;
+	if (ds < sr)
+	{
+		while (i < len)
+			ds[i++] = sr[i++];
+	}
+	else
+	{
+		i = len;
+		while (i > 0)
+			ds[i--] = sr[i--];
+	}
+	return (dst);
 }

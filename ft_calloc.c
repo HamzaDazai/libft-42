@@ -14,13 +14,13 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	if (nmemb < 0 || size < 0)
-		return NULL;
 	void	*arry;
-	
+
+	if (nmemb < 0 || size < 0)
+		return (NULL);
 	arry = (void *) malloc(nmemb * size);
 	if (arry == NULL)
-		return NULL;
-	ft_bzero(arry,(nmemb * size));
+		return (NULL);
+	ft_bzero (arry, (nmemb * size));
 	return (arry);
 }
