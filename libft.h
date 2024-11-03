@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:50:29 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/03 07:55:27 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/03 10:33:22 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ void ft_putnbr_fd(int n, int fd);
 t_list  *ft_lstnew(void *content);
 void ft_lstadd_front(t_list **lst, t_list *new);
 int ft_lstsize(t_list *lst);
+t_list *ft_lstlast(t_list *lst);
 
 #endif
   
