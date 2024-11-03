@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 04:23:37 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/01 05:06:46 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/03 20:21:45 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void ft_putstr_fd(char *s, int fd)
 {
-    if (s == NULL || fd < 0)
-        return;
     unsigned int    i;
 
     i = 0;
@@ -25,9 +23,10 @@ void ft_putstr_fd(char *s, int fd)
         i++;
     }
 }
+/*
 int main()
 {
     char s[] = "hamza dazia";
     ft_putstr_fd(s,-1);
     return 0;
-}
+}*/

@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 12:42:46 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/03 12:49:39 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/03 20:35:31 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 {
     t_list  *po;
     
-    if (lst == NULL)
+    if (lst == NULL || new == NULL)
         return;
     if (*lst == NULL)
     {

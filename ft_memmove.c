@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 06:39:49 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/03 08:55:36 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/03 19:30:34 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,19 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (ds < sr)
 	{
 		while (i < len)
-			ds[i++] = sr[i++];
+		{
+			ds[i] = sr[i];
+			i++;
+		}
 	}
 	else
 	{
 		i = len;
 		while (i > 0)
-			ds[i--] = sr[i--];
+		{
+			ds[i] = sr[i];
+			i--;
+		}
 	}
 	return (dst);
 }

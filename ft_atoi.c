@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:34:39 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/31 07:02:08 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/03 20:14:31 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,29 @@
 
 int	ft_atoi(const char *str)
 {
-	int			i;
-	int			sign;
-	long int	rs;
+	int					sign;
+	long long	rs;
+	long long	rs2;
 
-	i = 0;
 	sign = 1;
 	rs = 0;
-	while (str[i] != '\0' && ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32)))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	while (*str != '\0' && ((*str >= 9 && *str <= 13) || (*str == 32)))
+		str++;
+	if (*str == '+' || *str == '-')
 	{
-		if (str[i] == '-')
+		if (*str == '-')
 			sign = -1;
-		i++;
+		str++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (*str >= '0' && *str <= '9')
 	{
-		rs = rs * 10 + (str[i] - '0');
-		i++;
+		rs2 = rs;
+		rs = rs * 10 + (*str - '0');
+		if (rs / 10 != rs2 && sign == 1)
+			return (-1);
+		if (rs /10 != rs2 && sign == -1)
+			return (0);
+		str++;
 	}
-	if (sign == 1 && rs < 0)
-		return (-1);
-	if (sign == -1 && rs > 0)
-		return (0);
-	return (rs * sign);
+	return ((int)rs * sign);
 }

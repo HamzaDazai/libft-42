@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 17:56:41 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/01 02:20:49 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/03 20:33:30 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,13 +65,3 @@ char *ft_itoa(int n)
     return (str);
     
 }
-/*  
-int main()
-{
-    int   i = -124;
-    char *s = ft_itoa(i);
-    printf("%s",s);
-    free(s);
-    return 0;
-    
-}*/

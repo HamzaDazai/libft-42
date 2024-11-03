@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 05:32:26 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/03 07:44:32 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/03 20:21:27 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-    if (fd < 0)
-        return;
 	long	nb;
 
 	nb = n;

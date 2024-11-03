@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 05:21:39 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/01 05:29:29 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/03 20:24:37 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,8 @@
 
 void ft_putendl_fd(char *s, int fd)
 {
-    if (s == NULL || fd < 0)
-        return;
-    unsigned int    i;
-
-    i = 0;
-    while(s[i] != '\0')
-    {
-        ft_putchar_fd(s[i],fd);
-        i++;
-    }
-    write(1, "\n", 1);
+    ft_putstr_fd(s,fd);
+    write(fd, "\n", 1);
 }
 /* 
 int main()
