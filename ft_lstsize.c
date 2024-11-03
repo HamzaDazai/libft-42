@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 17:54:23 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/31 17:54:36 by hdazia           ###   ########.fr       */
+/*   Created: 2024/11/03 08:14:12 by hdazia            #+#    #+#             */
+/*   Updated: 2024/11/03 08:29:15 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char **ft_split(char const *s, char c)
+#include "libft.h"
+int ft_lstsize(t_list *lst)
 {
-    
+    t_list  *count;
+    int i;
+        
+    count = lst;
+    i = 0;
+    while(count != NULL)
+    {
+        count = count->next;
+        i++;
+    }
+    return (0);
 }
