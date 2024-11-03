@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/03 10:33:54 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/03 12:43:53 by hdazia           ###   ########.fr       */
+/*   Created: 2024/11/03 12:42:46 by hdazia            #+#    #+#             */
+/*   Updated: 2024/11/03 12:49:39 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+void ft_lstadd_back(t_list **lst, t_list *new)
 {
+    t_list  *po;
+    
     if (lst == NULL)
-        return NULL;
-    while (lst-> next != NULL)
+        return;
+    if (*lst == NULL)
     {
-        lst = lst -> next;
+        *lst = new;
+        return;
     }
-    return (lst);
+    po = ft_lstlast(*lst);
+    po-> next = new;
 }
