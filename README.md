@@ -11,4 +11,6 @@ check strnstr NULL ;
 tab binery in memset ;
 layout memory;
 file descriptor;
-data starctur   ;
+data starctur   ;.
+///?/
+if you are dealing with extended character sets or binary data, using unsigned char can prevent issues related to negative values when interpreting byte data.
