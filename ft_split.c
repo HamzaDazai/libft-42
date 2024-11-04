@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 04:23:37 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/04 13:17:31 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/04 18:48:00 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static char    **free_array(char **ptr, int i)
     free(ptr);
     return (0);
 }
-static char	ft_print_strings(char *str, char *s, int j , int word_len)
+static char	*ft_print_strings(char *str, const char *s, int j , int word_len)
 {
 	int	i;
 
@@ -33,7 +33,7 @@ static char	ft_print_strings(char *str, char *s, int j , int word_len)
 		i++;
 		word_len--;
 	}
-	str[j] = '\0';
+	str[i] = '\0';
 	return (str); 
 }
 static char	**ft_split_string(char const *s, char c, char **s1, int c_words)
@@ -55,9 +55,9 @@ static char	**ft_split_string(char const *s, char c, char **s1, int c_words)
 			word_len++;
 		}
 		s1[word] = (char *)malloc((word_len +1)*(sizeof (char )));
-		if (!s1)
+		if (!s1[word])
 			return (free_array(s1, word));
-		ft_print_strings(s1[word],s, j, c_words);
+		ft_print_strings(s1[word],s, j, word_len);
 		word_len = 0;
 		word++;
 	}
@@ -66,7 +66,7 @@ static char	**ft_split_string(char const *s, char c, char **s1, int c_words)
 }
 
 //conter words
-static int	ft_contur_w(char  *s, char ch)
+static int	ft_contur_w(const char	*s, char ch)
 {
 	int	i;
 	int	c_word;
@@ -98,45 +98,6 @@ char **ft_split(char const *s, char c)
 	s1 = (char **)malloc((c_words + 1) * sizeof(char *));
 	if (!s1)
 		return (NULL);
-	s1 = ft_split_string(s,c,*s1,c_words);
+	s1 = ft_split_string(s, c, s1, c_words);
 	return (s1);
-}
-
-
-
-
-
-
-#include <stdio.h>
-#include <stdlib.h>
-
-// Function prototypes for the helper functions
-char    **ft_split(char const *s, char c);
-
-// Function to print and free the result of ft_split
-void    print_and_free(char **result)
-{
-    int i = 0;
-    while (result[i] != NULL)
-    {
-        printf("Word %d: %s\n", i + 1, result[i]);
-        free(result[i]);
-        i++;
-    }
-    free(result);
-}
-
-// Main function to test ft_split
-int main(void)
-{
-    char test_str []= "This is a test string with multiple words";
-    char delimiter = ' ';
-    char **result;
-
-    result = ft_split(test_str, delimiter);
-
-    // Print the words in the result array
-    print_and_free(result);
-
-    return (0);
 }

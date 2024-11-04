@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:03:56 by hdazia            #+#    #+#             */
-/*   Updated: 2024/10/28 00:09:48 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/04 19:15:18 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void	*ft_memcpy(void	*dst, const void	*src, size_t n)
 {
-	char		*ds;
-	const char	*sr;
+	unsigned char	*ds;
+	unsigned const char	*sr;
 	size_t		i;
 
-	ds = (char *)dst;
-	sr = (const char *)src;
+	if (dst == NULL|| src == NULL)
+		return (dst);
+	ds = (unsigned char *)dst;
+	sr = (unsigned const char *)src;
 	i = 0;
 	while (i < n)
 	{
