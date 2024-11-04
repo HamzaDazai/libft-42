@@ -6,25 +6,35 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 04:23:37 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/04 13:05:10 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/04 13:17:31 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	ft_print_strings(char *s, char *s1, int j , int word_len)
+static char    **free_array(char **ptr, int i)
+{
+    while (i > 0)
+    {
+        i--;
+        free(ptr[i]);
+    }
+    free(ptr);
+    return (0);
+}
+static char	ft_print_strings(char *str, char *s, int j , int word_len)
 {
 	int	i;
 
 	i = 0;
 	while(word_len > 0)
 	{
-		s1[i] = s[j - word_len];
+		str[i] = s[j - word_len];
 		i++;
 		word_len--;
 	}
-	s1[j] = '\0';
-	return (s1); 
+	str[j] = '\0';
+	return (str); 
 }
 static char	**ft_split_string(char const *s, char c, char **s1, int c_words)
 {
@@ -46,14 +56,16 @@ static char	**ft_split_string(char const *s, char c, char **s1, int c_words)
 		}
 		s1[word] = (char *)malloc((word_len +1)*(sizeof (char )));
 		if (!s1)
-			return (NULL);
-		ft_print_strings(s, s1[word], j, c_words);
+			return (free_array(s1, word));
+		ft_print_strings(s1[word],s, j, c_words);
 		word_len = 0;
 		word++;
 	}
 	s1[word] = 0;
 	return (s1);
 }
+
+//conter words
 static int	ft_contur_w(char  *s, char ch)
 {
 	int	i;
@@ -74,6 +86,7 @@ static int	ft_contur_w(char  *s, char ch)
 	}
 	return (c_word);
 }
+// the origenal fonction
 char **ft_split(char const *s, char c)
 {
 	char	**s1;
@@ -83,11 +96,17 @@ char **ft_split(char const *s, char c)
 		return (NULL);
 	c_words = ft_contur_w(s,c);
 	s1 = (char **)malloc((c_words + 1) * sizeof(char *));
-	if (s1 == NULL)
+	if (!s1)
 		return (NULL);
 	s1 = ft_split_string(s,c,*s1,c_words);
 	return (s1);
 }
+
+
+
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
