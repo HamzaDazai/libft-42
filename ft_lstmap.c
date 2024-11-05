@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:01:23 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/05 04:37:35 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/05 19:21:16 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,9 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
     new_list = NULL;
     while (lst != NULL)
     {
-        void *new_content = f(lst->content);
-        
-        if (new_content == NULL)
-        {
-            ft_lstclear(&new_list, del);
-            return (NULL);
-        }
-        new_node = ft_lstnew(new_content);
+        new_node = ft_lstnew(f(lst->content));
         if (!new_node)
         {
-            del(new_content);
             ft_lstclear(&new_list, del);
             return (NULL);
         }
