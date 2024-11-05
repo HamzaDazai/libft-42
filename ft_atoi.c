@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:34:39 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/03 20:14:31 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/05 21:52:01 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(const char *str)
 {
-	int					sign;
+	int			sign;
 	long long	rs;
 	long long	rs2;
 
@@ -34,9 +34,9 @@ int	ft_atoi(const char *str)
 		rs = rs * 10 + (*str - '0');
 		if (rs / 10 != rs2 && sign == 1)
 			return (-1);
-		if (rs /10 != rs2 && sign == -1)
+		if (rs / 10 != rs2 && sign == -1)
 			return (0);
 		str++;
 	}
-	return ((int)rs * sign);
+	return ((int)(rs * sign));
 }

@@ -6,23 +6,24 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 03:37:22 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/01 03:53:41 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/05 22:08:55 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    unsigned int    i;
-    
-    i = 0;
-    while (s[i] != '\0')
-    {
-        (f)(i,&s[i]);
-        i++;
-    }
+	unsigned int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
+
 /*
 void uppercase_with_index(unsigned int i, char *c) {
     if (*c >= 'a' && *c <= 'z') {  // Check if character is lowercase

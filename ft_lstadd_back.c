@@ -6,23 +6,23 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 12:42:46 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/03 20:35:31 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/05 21:48:05 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    t_list  *po;
-    
-    if (lst == NULL || new == NULL)
-        return;
-    if (*lst == NULL)
-    {
-        *lst = new;
-        return;
-    }
-    po = ft_lstlast(*lst);
-    po-> next = new;
+	t_list	*po;
+
+	if (lst == NULL || new == NULL)
+		return ;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
+	po = ft_lstlast(*lst);
+	po->next = new;
 }
