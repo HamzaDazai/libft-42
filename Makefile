@@ -21,6 +21,8 @@ CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 
+%.o : %.c
+	${CC} ${CFLAGS} -c $< -o $@
 
 ${NAME}: ${OBJS}
 	${LIBC} ${NAME} ${OBJS}

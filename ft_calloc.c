@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:32:23 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/05 21:49:21 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/07 16:15:36 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*array;
+	size_t	total_size;
 
+	total_size = nmemb * size;
+	if (nmemb != 0 && total_size / nmemb != size)
+		return (NULL);
 	array = (void *)malloc(nmemb * size);
 	if (array == NULL)
 		return (NULL);
