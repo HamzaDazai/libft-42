@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 04:23:37 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/05 22:08:29 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/08 23:04:51 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,3 +104,31 @@ char	**ft_split(char const *s, char c)
 	s1 = ft_split_string(s, c, s1, c_words);
 	return (s1);
 }
+
+/*
+int main(void)
+{
+    char **result;
+    char str[] = "Hello, world! This is a test.";
+    char delimiter = ' ';
+    int i = 0;
+
+    result = ft_split(str, delimiter);
+
+    if (result == NULL)
+    {
+        printf("ft_split returned NULL.\n");
+        return 1;
+    }
+
+    printf("Split result:\n");
+    while (result[i] != NULL)
+    {
+        printf("Word %d: %s\n", i + 1, result[i]);
+        free(result[i]);  // Free each word
+        i++;
+    }
+    free(result);  // Free the main array
+
+    return 0;
+}*/

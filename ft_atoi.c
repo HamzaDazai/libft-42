@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:34:39 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/08 21:01:14 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/08 21:07:46 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,11 @@ int	ft_atoi(const char *str)
 	return ((int)(rs * sign));
 }
 
-#include <stdio.h>
-#include <string.h>
-
-int main()
+/*int main()
 {
-	char	str[] = "9494964946";
+	char	str[] = "33548949494964946";
 	int i = ft_atoi(str);
 	printf("%d \n",i);
 	printf("%d",atoi(str));
 	return 0;
-}
+}*/
