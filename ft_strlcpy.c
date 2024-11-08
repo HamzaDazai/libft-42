@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:35:13 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/07 14:54:17 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/08 10:36:25 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 // {
 // 	char dest[] = "Hamza ";
 // 	char src[] = "dazia";
-// 	printf("%lu", ft_strlcpy(NULL,src,7));
+// 	printf("%lu", strlcpy(dest,src,0));
 // 	return 0;
 // }
