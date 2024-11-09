@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:53:12 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/05 22:17:40 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/09 20:13:54 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,15 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		haystack++;
 	}
 	return (NULL);
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+	char str[] = "hamza dazia ssa asa ";
+	char s[] = "mza";
+	strnstr(str,NULL,0);
+	printf("%s",str);
 }

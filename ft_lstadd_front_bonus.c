@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 10:34:00 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/09 18:01:54 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/09 19:55:57 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!lst || !new)
+		return ;
 	if (new != NULL)
 	{
 		new->next = *lst;

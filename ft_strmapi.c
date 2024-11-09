@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 02:33:55 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/05 22:23:25 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/09 20:51:03 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
-/*
-int main()
-{
-    char *s = ft_strmapi("HAMZA",cast_tolowe);
-    printf("%s",s);
-    free(s);
-    return (0);
-}*/
