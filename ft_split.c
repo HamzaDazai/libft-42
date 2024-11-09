@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 04:23:37 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/08 23:04:51 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/09 17:34:01 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,30 +105,21 @@ char	**ft_split(char const *s, char c)
 	return (s1);
 }
 
-/*
-int main(void)
-{
-    char **result;
-    char str[] = "Hello, world! This is a test.";
-    char delimiter = ' ';
-    int i = 0;
+// int main(void)
+// {
+//     char **result;
+//     char str[] = "Hello, world! This is a test.";
+//     char delimiter = ' ';
+//     int i = 0;
 
-    result = ft_split(str, delimiter);
+//     result = ft_split(str, delimiter);
+//     while (result[i] != NULL)
+//     {
+//         printf("Word %d: %s\n", i, result[i]);
+//         free(result[i]);
+//         i++;
+//     }
+//     free(result);
 
-    if (result == NULL)
-    {
-        printf("ft_split returned NULL.\n");
-        return 1;
-    }
-
-    printf("Split result:\n");
-    while (result[i] != NULL)
-    {
-        printf("Word %d: %s\n", i + 1, result[i]);
-        free(result[i]);  // Free each word
-        i++;
-    }
-    free(result);  // Free the main array
-
-    return 0;
-}*/
+//     return 0;
+// }

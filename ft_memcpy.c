@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:03:56 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/07 08:37:13 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/09 17:58:24 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-
-// int main()
-// {
-//     char str1[] = "hamza";
-//     char str2[] = "hamza";
-//     char src[] = "dazia";
-
-//     printf("Original memcpy: %s\n", memcpy(str1, src, 6));
-//     printf("Custom ft_memcpy: %s\n", ft_memcpy(str1, src, 6));
-
-//     return 0;
-// }
