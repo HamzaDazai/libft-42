@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:50:29 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/08 11:53:11 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/09 12:15:57 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
+# include <string.h>
 
 typedef struct s_list
 {

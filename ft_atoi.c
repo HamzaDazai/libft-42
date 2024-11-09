@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:34:39 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/08 21:07:46 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/09 10:19:41 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	ft_atoi(const char *str)
 {
 	int			sign;
-	long long	rs;
-	long long	rs2;
+	long int	rs;
+	long int	rs2;
 
 	sign = 1;
 	rs = 0;
@@ -41,11 +41,13 @@ int	ft_atoi(const char *str)
 	return ((int)(rs * sign));
 }
 
-/*int main()
+/*
+int main()
 {
-	char	str[] = "33548949494964946";
+	char	str[] = "      -22337236854775807";
 	int i = ft_atoi(str);
 	printf("%d \n",i);
 	printf("%d",atoi(str));
 	return 0;
-}*/
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 17:56:41 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/05 21:52:56 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/09 12:09:36 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	p_char(char *str, unsigned int diget, int len)
 	}
 }
 
-static long int	ft_len(int n)
+static long int	ft_conter_len(int n)
 {
 	long int	len;
 
@@ -43,7 +43,7 @@ char	*ft_itoa(int n)
 	unsigned int	diget;
 	long int		len;
 
-	len = ft_len(n);
+	len = ft_conter_len(n);
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
@@ -63,3 +63,12 @@ char	*ft_itoa(int n)
 	p_char(str, diget, len);
 	return (str);
 }
+
+// int    main(void)
+// {
+//     char    *i;
+
+//     i = ft_itoa(-7896);
+//     printf("%s\n", i);
+//     free(i);
+// }
