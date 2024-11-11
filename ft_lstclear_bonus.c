@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:28:28 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/05 21:54:06 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/11 18:02:59 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*p;
 	t_list	*tmp;
 
-	if (lst == NULL || del == NULL)
+	if (lst == NULL || del == NULL || *lst == NULL)
 		return ;
 	p = *lst;
 	while (p != NULL)

@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:01:16 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/09 12:24:26 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/11 22:26:06 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-// 	char str[] = "hamza dazia ";
-// 	char c = 'z';
-// 	printf("%s \n",ft_memchr(str,c,472745747474));
-// 	printf("%p \n",ft_memchr(str,c,sizeof(str)));
-// 	printf("%s \n",memchr(str,c,4772154579));
-// 	printf("%p",memchr(str,c,sizeof(str)));
-// 	return 0;
-// }

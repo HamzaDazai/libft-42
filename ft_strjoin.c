@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 19:45:49 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/07 15:45:10 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/11 22:35:51 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	copy_strings(all_str, s1, s2);
 	return (all_str);
 }
-
-// int main(void)
-// {
-//     char *all[]= {"simo",NULL};
-//     char *ch= ft_strjoin(all[0],all[1]);
-//     printf("%s \n",ch);
-//     return 0;
-// }

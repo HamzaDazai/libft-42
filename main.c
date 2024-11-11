@@ -85,7 +85,7 @@ void ft_multtiy(void *content)
 
 void del(void *content)
 {
-    (void)content;
+    free(content);
 }
 
 int main()

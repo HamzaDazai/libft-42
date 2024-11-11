@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+ /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
@@ -6,17 +6,18 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:34:39 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/09 10:19:41 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/11 21:03:32 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {
 	int			sign;
 	long int	rs;
-	long int	rs2;
+	long int rs2;
 
 	sign = 1;
 	rs = 0;
@@ -36,18 +37,17 @@ int	ft_atoi(const char *str)
 			return (-1);
 		if (rs / 10 != rs2 && sign == -1)
 			return (0);
+		printf(" int %ld \n",rs2);
 		str++;
 	}
-	return ((int)(rs * sign));
+	return ((rs * sign));
 }
 
-/*
 int main()
 {
-	char	str[] = "      -22337236854775807";
+	char	str[] = "     2147483649s9";
 	int i = ft_atoi(str);
 	printf("%d \n",i);
 	printf("%d",atoi(str));
 	return 0;
 }
-*/
