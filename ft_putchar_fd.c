@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 03:54:06 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/12 10:51:03 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/12 20:10:11 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	if(fd >= 0)
-		write(fd, &c, 1);
+	if (fd < 0)
+		return ;
+	write(fd, &c, 1);
 }

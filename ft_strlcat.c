@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:35:07 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/12 17:58:56 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/12 20:13:30 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	src_len;
 	size_t	i;
 	size_t	j;
-	
+
 	src_len = ft_strlen(src);
 	if (!dst && dstsize == 0)
 	{
@@ -38,10 +38,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (dst_len + src_len);
 }
-
-// int main()
-// {
-// 	char str[] = "hamza d";
-// 	char s2[]= "azia";
-// 	printf("%zu",ft_strlcat(NULL,str,0));
-// }

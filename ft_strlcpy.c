@@ -6,13 +6,11 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:35:13 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/12 18:08:56 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/12 20:15:05 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
-#include <string.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

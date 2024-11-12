@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:53:12 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/11 13:36:51 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/12 20:03:45 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,23 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	const char	*p_haystack;
-	const char	*p_needle;
-	size_t		i;
+	size_t	needle_len;
+	size_t	i;
 
-	i = 0;
-	if (haystack == NULL && len == 0 && needle != NULL)
-		return (NULL);
-	if (*needle == '\0')
-		return ((char *)haystack);
-	while (*haystack != '\0'
-		&& ft_strlen(haystack) >= ft_strlen(needle)
-		&& i < len)
+	needle_len = ft_strlen(needle);
+	if (needle_len == 0)
 	{
-		p_haystack = haystack;
-		p_needle = needle;
-		while (*p_haystack == *p_needle && *p_needle != '\0'
-			&& (i + (p_haystack - haystack)) < len)
+		return ((char *)haystack);
+	}
+	i = 0;
+	while (i < len && haystack[i] != '\0')
+	{
+		if (i + needle_len <= len
+			&& ft_strncmp(&haystack[i], needle, needle_len) == 0)
 		{
-			p_haystack++;
-			p_needle++;
+			return ((char *)&haystack[i]);
 		}
-		if (*p_needle == '\0')
-			return ((char *)haystack);
 		i++;
-		haystack++;
 	}
 	return (NULL);
 }
