@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {
@@ -37,17 +36,7 @@ int	ft_atoi(const char *str)
 			return (-1);
 		if (rs / 10 != rs2 && sign == -1)
 			return (0);
-		printf(" int %ld \n",rs2);
 		str++;
 	}
 	return ((rs * sign));
-}
-
-int main()
-{
-	char	str[] = "     2147483649s9";
-	int i = ft_atoi(str);
-	printf("%d \n",i);
-	printf("%d",atoi(str));
-	return 0;
 }

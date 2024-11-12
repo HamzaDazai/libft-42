@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 04:23:37 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/11 18:31:46 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/12 15:48:08 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,15 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	unsigned int	i;
 
-	i = 0;
-	if (s == NULL)
-		return ;
-	while (s[i] != '\0')
+	if (fd >= 0)
 	{
-		ft_putchar_fd(s[i], fd);
-		i++;
+		i = 0;
+		if (s == NULL)
+			return ;
+		while (s[i] != '\0')
+		{
+			ft_putchar_fd(s[i], fd);
+			i++;
+		}
 	}
 }
-
-/*
-int main()
-{
-    char s[] = "hamza dazia";
-    ft_putstr_fd(s,-1);
-    return 0;
-}*/
