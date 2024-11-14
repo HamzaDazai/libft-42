@@ -6,7 +6,7 @@
 /*   By: hdazia <hdazia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 06:39:49 by hdazia            #+#    #+#             */
-/*   Updated: 2024/11/12 10:41:31 by hdazia           ###   ########.fr       */
+/*   Updated: 2024/11/14 17:46:18 by hdazia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char		*ds;
-	unsigned const char	*sr;
-	size_t				i;
+	char		*ds;
+	const char	*sr;
+	size_t		i;
 
-	ds = (unsigned char *)dst;
-	sr = (unsigned const char *) src;
+	ds = (char *)dst;
+	sr = (const char *) src;
 	if (ds == sr || len == 0)
 		return (ds);
 	i = 0;
